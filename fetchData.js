@@ -1,9 +1,11 @@
 const { GraphQLClient } = require('graphql-request');
 const fs = require('fs');
 const HttpsProxyAgent = require('https-proxy-agent');
+require('dotenv').config();
 
-const url = 'https://sdds-cms.herokuapp.com/graphql';
-// const url = 'http://localhost:1339/graphql';
+const url = process.env.CMS_SERVER;
+// const url = 'http://localhost:1339/graphql;
+console.log('Fetch from ', url);
 
 const init = () => {
   getData('content', content);
