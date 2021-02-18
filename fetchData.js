@@ -4,6 +4,8 @@ const HttpsProxyAgent = require('https-proxy-agent');
 require('dotenv').config();
 
 const url = process.env.CMS_SERVER;
+// const url = 'http://localhost:1339/graphql;
+console.log('Fetch from ', url);
 
 const init = () => {
   getData('content', content);
